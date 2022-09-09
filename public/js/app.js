@@ -56155,6 +56155,9 @@ window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   disableStats: true // cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 
 });
+window.Echo.channel('DemoChannel').listen('WebsocketDemoEvent', function (e) {
+  console.log(e);
+});
 
 /***/ }),
 

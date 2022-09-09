@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\WebsocketDemoEvent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
+    broadcast( new WebsocketDemoEvent( 'pass some data' ) );
+
     return view('welcome');
 });
 

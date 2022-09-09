@@ -43,3 +43,8 @@ window.Echo = new Echo({
     // cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 });
 
+window.Echo.channel('DemoChannel')
+.listen('WebsocketDemoEvent', (e)=>{
+    console.log(e);
+});
+
