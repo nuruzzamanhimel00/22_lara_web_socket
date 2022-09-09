@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="container">
-    <chats-component> </chats-component>
+    <chats-component :user="{{ auth()->user() }}" > </chats-component>
 </div>
 @endsection

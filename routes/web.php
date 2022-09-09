@@ -25,4 +25,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/messages', 'CartController@fetchMessages')->name('fetch.messages');
+Route::post('/messages', 'CartController@sendMessages')->name('send.messages');
+
 Route::get('/carts', 'CartController@index')->name('carts');

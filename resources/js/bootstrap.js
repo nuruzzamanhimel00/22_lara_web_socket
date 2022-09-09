@@ -40,7 +40,7 @@ window.Echo = new Echo({
     wsPort: 6001,
     forceTLS: false,
     disableStats: true,
-    // cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+    cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 });
 
 window.Echo.channel('DemoChannel')
